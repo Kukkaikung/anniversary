@@ -198,7 +198,7 @@
 
   .tl-empty { flex: 1; }
 
-  /* Timeline photo styles */
+  /* Default timeline photo styles */
   .tl-photo {
     flex: 1;
     display: flex;
@@ -216,8 +216,8 @@
   .tl-photo img {
     width: 100%;
     max-width: 200px;
-    height: 200px;
-    object-fit: cover;
+    height: 200px; /* Fixed height for square look */
+    object-fit: cover; /* This was cropping the image */
     border-radius: 12px;
     box-shadow: 0 8px 30px rgba(232,127,168,0.25);
     border: 3px solid white;
@@ -225,6 +225,30 @@
   }
 
   .tl-photo img:hover {
+    transform: scale(1.04) rotate(-1deg);
+    box-shadow: 0 16px 40px rgba(232,127,168,0.35);
+  }
+
+  /* NEW: Special style for landscape (wide) photos to show full image */
+  .tl-photo-landscape {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 1.5rem;
+  }
+
+  .tl-photo-landscape img {
+    width: 100%; /* Take full available width */
+    height: auto; /* Remove fixed height */
+    object-fit: contain; /* Show the full image without cropping */
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(232,127,168,0.25);
+    border: 3px solid white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .tl-photo-landscape img:hover {
     transform: scale(1.04) rotate(-1deg);
     box-shadow: 0 16px 40px rgba(232,127,168,0.35);
   }
@@ -447,7 +471,7 @@
     </div>
 
     <div class="tl-item">
-      <div class="tl-photo">
+      <div class="tl-photo-landscape">
         <img src="pic2.jpg" alt="Month 2">
       </div>
       <div class="tl-dot"></div>
@@ -545,7 +569,7 @@
 
   // ── Counter: set your anniversary start date here ──
   // Change this to the actual date you got together (YYYY, MM-1, DD)
-  const start = new Date(2026, 1, 14); // Feb 13, 2025 — change this!
+  const start = new Date(2026, 1, 14); // Feb 14, 2026 — set your date here!
 
   function updateCounter() {
     const now = new Date();
