@@ -198,6 +198,37 @@
 
   .tl-empty { flex: 1; }
 
+  /* Timeline photo styles */
+  .tl-photo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 1.5rem;
+  }
+
+  .tl-item:nth-child(even) .tl-photo {
+    justify-content: flex-start;
+    padding-right: 0;
+    padding-left: 1.5rem;
+  }
+
+  .tl-photo img {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(232,127,168,0.25);
+    border: 3px solid white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .tl-photo img:hover {
+    transform: scale(1.04) rotate(-1deg);
+    box-shadow: 0 16px 40px rgba(232,127,168,0.35);
+  }
+
   .tl-month {
     font-size: 0.7rem;
     letter-spacing: 0.2em;
@@ -382,10 +413,8 @@
 </head>
 <body>
 
-<!-- Floating hearts bg -->
 <div class="hearts-bg" id="heartsBg"></div>
 
-<!-- Counter bar -->
 <div class="counter-bar">
   <div class="counter-item"><span class="counter-num" id="c-days">—</span><span class="counter-label">Days</span></div>
   <div class="counter-item"><span class="counter-num" id="c-hrs">—</span><span class="counter-label">Hours</span></div>
@@ -393,7 +422,6 @@
   <div class="counter-item"><span class="counter-num" id="c-sec">—</span><span class="counter-label">Seconds</span></div>
 </div>
 
-<!-- HERO -->
 <section id="hero">
   <p class="hero-date">Our 3-Month Anniversary 🌸</p>
   <h1 class="hero-title">3 Months<em>with you</em></h1>
@@ -401,7 +429,6 @@
   <p class="scroll-hint">↓ Scroll to remember ↓</p>
 </section>
 
-<!-- TIMELINE -->
 <section id="timeline">
   <p class="section-label">Our Story So Far</p>
   <h2 class="section-heading">How We Got Here</h2>
@@ -414,11 +441,15 @@
         <p class="tl-text">The day everything changed. I didn't know then just how much you'd matter to me. Every conversation felt like discovering something new.</p>
       </div>
       <div class="tl-dot"></div>
-      <div class="tl-empty"></div>
+      <div class="tl-photo">
+        <img src="pic1.jpg" alt="Month 1">
+      </div>
     </div>
 
     <div class="tl-item">
-      <div class="tl-empty"></div>
+      <div class="tl-photo">
+        <img src="pic2.jpg" alt="Month 2">
+      </div>
       <div class="tl-dot"></div>
       <div class="tl-content">
         <p class="tl-month">Month 2</p>
@@ -434,13 +465,14 @@
         <p class="tl-text">Three months in and you still make my heart skip. This isn't just a milestone — it's a reminder of how lucky I am to have you in my life.</p>
       </div>
       <div class="tl-dot"></div>
-      <div class="tl-empty"></div>
+      <div class="tl-photo">
+        <img src="pic3.jpg" alt="Month 3">
+      </div>
     </div>
 
   </div>
 </section>
 
-<!-- REASONS -->
 <section id="reasons">
   <p class="section-label">Why I Love You</p>
   <h2 class="section-heading">The Little Things</h2>
@@ -485,7 +517,6 @@
   </div>
 </section>
 
-<!-- MESSAGE -->
 <section id="message">
   <p class="section-label">From My Heart</p>
   <h2 class="section-heading">A Note for You</h2>
