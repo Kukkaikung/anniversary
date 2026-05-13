@@ -178,8 +178,10 @@
     text-align: right;
     padding-right: 1.5rem;
   }
+  
+  /* แก้ไขให้ Month 2 ชิดขวาเหมือน Month 1 และ 3 */
   .tl-item:nth-child(even) .tl-content {
-    text-align: left;
+    text-align: right;
     padding-right: 0;
     padding-left: 1.5rem;
   }
@@ -269,11 +271,14 @@
     color: var(--warm-dark);
   }
 
+  /* เพิ่ม text-justify เพื่อให้ขอบข้อความภาษาไทยเรียบเนียนขึ้น */
   .tl-text {
     font-size: 0.9rem;
     color: #7a6060;
     line-height: 1.7;
     text-align: justify;
+    text-justify: inter-word;
+    word-break: break-word;
   }
 
   /* ── REASONS ── */
@@ -497,50 +502,6 @@
 
   </div>
 </section>
-
-<!-- <section id="reasons">
-  <p class="section-label">Why I Love You</p>
-  <h2 class="section-heading">The Little Things</h2>
-  <div class="reasons-grid">
-
-    <div class="reason-card">
-      <div class="reason-icon">😊</div>
-      <h3 class="reason-title">Your Smile</h3>
-      <p class="reason-text">It's the kind of smile that makes everything feel okay. I'd do a lot just to see it.</p>
-    </div>
-
-    <div class="reason-card">
-      <div class="reason-icon">🗣️</div>
-      <h3 class="reason-title">The Way You Talk</h3>
-      <p class="reason-text">You say things that stick with me long after the conversation ends. I love the way your mind works.</p>
-    </div>
-
-    <div class="reason-card">
-      <div class="reason-icon">🤝</div>
-      <h3 class="reason-title">How You Care</h3>
-      <p class="reason-text">You notice things. Small things. And that makes me feel seen in a way I didn't expect.</p>
-    </div>
-
-    <div class="reason-card">
-      <div class="reason-icon">🌙</div>
-      <h3 class="reason-title">Just Being You</h3>
-      <p class="reason-text">There's nobody like you. Genuinely. And every day I'm more grateful you chose to be with me.</p>
-    </div>
-
-    <div class="reason-card">
-      <div class="reason-icon">😂</div>
-      <h3 class="reason-title">You Make Me Laugh</h3>
-      <p class="reason-text">The kind of laughing that hurts and you can't stop. My favorite kind.</p>
-    </div>
-
-    <div class="reason-card">
-      <div class="reason-icon">🏠</div>
-      <h3 class="reason-title">You Feel Like Home</h3>
-      <p class="reason-text">Wherever you are, I feel comfortable. Safe. Like I can just be myself.</p>
-    </div>
-
-  </div>
-</section> -->
 
 <section id="message">
   <p class="section-label">From My Heart</p>
